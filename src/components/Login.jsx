@@ -1,7 +1,11 @@
 import React from "react";
 import Greece from "../assets/Greece.jpg";
+import { Navigate, useNavigate } from "react-router-dom";
 
 function Login() {
+ 
+  const navigate = useNavigate()
+
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 h-screen w-full overflow-hidden">
@@ -22,7 +26,7 @@ function Login() {
               <label>Password</label>
               <input className="border p-2 rounded-lg" type="password" />
             </div>
-            <button className=" w-full my-5 py-2 rounded-lg bg-[#10659d] shadow-lg shadow-[#10659d] text-white">
+            <button className=" w-full my-5 py-2 rounded-xl bg-[#10659d] shadow-xl shadow-[#10659d] text-white">
               Sign In
             </button>
             <div>

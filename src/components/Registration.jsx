@@ -1,12 +1,17 @@
 import React from "react";
+import { Navigate, useNavigate } from "react-router-dom";
+import Village from "../assets/Church.jpg";
 
 function Registration() {
+
+  const navigate = useNavigate()
+
   return (
     <div>
       <>
         <div
           className="h-screen w-full bg-cover bg-zinc-900/90 mix-blend-overlay bg-no-repeat relative bg-center object-fit-contain"
-          style={{ backgroundImage: `url(${Field})` }}
+          style={{ backgroundImage: `url(${Village})` }}
         >
           <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0"></div>
           <div className="flex justify-center items-center h-full relative z-10">
@@ -30,14 +35,14 @@ function Registration() {
                 <label>Password</label>
                 <input className="border p-2 rounded-lg" type="password" />
               </div>
-              {error && <div className="text-red-500">{error}</div>}
-              <button className="w-full my-4 py-4 rounded-full bg-[#a6c48a] shadow-lg shadow-[#a6c48a] text-white">
+            
+              <button className="w-full my-4 py-4 rounded-full bg-[#10659d] shadow-lg shadow-[#10659d] text-white">
                 Create Account
               </button>
               <div>
                 <p>
                   Already have an account yet?{" "}
-                  <a className="text-[#a6c48a]" href="./Login">
+                  <a className="text-[#10659d]" href="./Login">
                     Sign in
                   </a>
                 </p>
