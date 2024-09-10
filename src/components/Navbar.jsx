@@ -17,11 +17,15 @@ function Navbar() {
           Ocean Breeze
         </h1>
       </div>
-      <ul className="hidden md:flex justify-center items-center">
-        <li>Home</li>
-        <li>Rooms</li>
-        <li>About Us</li>
-      </ul>
+
+      {/* Centering the Navbar links */}
+      <div className="flex-grow flex justify-center">
+        <ul className="hidden md:flex space-x-8 items-center">
+          <li>Home</li>
+          <li>Rooms</li>
+          <li>About Us</li>
+        </ul>
+      </div>
 
       {/* Hamburger Menu */}
       <div onClick={handleNav} className="md:hidden z-10">
