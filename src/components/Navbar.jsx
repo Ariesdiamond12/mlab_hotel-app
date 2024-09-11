@@ -52,12 +52,11 @@ function Navbar() {
           <li>About Us</li>
           <li>Home</li>
           <div className="flex flex-col">
-            <button className="my-6">Account</button>
-            <button>Inquire</button>
+            <button className="global-btn my-6">Account</button>
+            <button className="global-btn">Inquire</button>
           </div>
         </ul>
       </div>
-
     </div>
   );
 }

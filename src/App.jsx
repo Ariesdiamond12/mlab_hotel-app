@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Registration from "./components/Registration";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Explore from "./components/Explore";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Hero />} />
           <Route path="/login" element={<Login />} />
           <Route path="/registration" element={<Registration />} />
+          <Route path="/explore" element={<Explore />} />
         </Routes>
       </BrowserRouter>
     </div>

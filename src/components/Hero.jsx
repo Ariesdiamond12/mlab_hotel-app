@@ -24,7 +24,7 @@ function Hero() {
           Book Your Travel And Transportation Service With Us And Enjoy A
           Hassle-Free And Memorable Journey.
         </p>
-        <button className="rounded-full drop-shadow-lg bg-white text-black font-semibold py-2 px-6 mt-7 hover:bg-gray-200 transition">
+        <button className="rounded-full shadow-lg bg-white text-black font-semibold py-2 px-6 mt-7 hover:bg-gray-200 transition">
           Book Now
         </button>
       </div>
