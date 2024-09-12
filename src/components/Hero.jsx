@@ -1,6 +1,8 @@
 import React from "react";
 import santorini from "../assets/santorini.jpg";
 import Navbar from "./Navbar";
+import Explore from "./Explore";
+import Content from "./Content";
 
 function Hero() {
   return (
@@ -28,6 +30,8 @@ function Hero() {
           Book Now
         </button>
       </div>
+      <Explore />
+      <Content/>
     </div>
   );
 }

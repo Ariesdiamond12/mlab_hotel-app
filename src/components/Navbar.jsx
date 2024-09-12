@@ -13,7 +13,7 @@ function Navbar() {
   return (
     <div className="flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white">
       {/* Navbar */}
-      <div>
+      <div className="pl-16">
         <h1 onClick={handleNav} className={logo ? "hidden" : "block"}>
           Ocean Breeze
         </h1>
