@@ -5,7 +5,7 @@ import Luxury from "../assets/luxury-villa.jpg";
 
 function Content() {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="flex flex-col mb-44">
       {/* Title Section */}
       <div className="text-center mt-20">
         <h1 className="font-semibold text-2xl">Explore Our Exclusive Villas</h1>

@@ -23,7 +23,7 @@ function Navbar() {
       <div className="flex-grow flex justify-center">
         <ul className="hidden md:flex space-x-8 items-center">
           <li>Home</li>
-          <li>Rooms</li>
+          <li><a href=""></a>Rooms</li>
           <li>About Us</li>
         </ul>
       </div>

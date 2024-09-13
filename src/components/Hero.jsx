@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Explore from "./Explore";
 import Content from "./Content";
 import Map from "./Map";
+import Footer from "./Footer";
 
 function Hero() {
   return (
@@ -28,7 +29,7 @@ function Hero() {
 
         {/* Hero Content */}
         <div className="absolute top-0 w-full h-full flex flex-col justify-center items-center text-center text-white px-4">
-          <h1 className="text-3xl md:text-3xl lg:text-4xl font-normal mb-4">
+          <h1 className="text-3xl md:text-3xl lg:text-4xl font-semibold mb-4">
             The Easiest Way To <br /> Plan Your Dream Trip
           </h1>
           <p className="text-lg md:text-xl lg:text-2xl font-light max-w-[700px]">
@@ -44,6 +45,7 @@ function Hero() {
       <Explore />
       <Content />
       <Map />
+      <Footer/>
     </div>
   );
 }

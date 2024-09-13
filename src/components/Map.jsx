@@ -2,7 +2,7 @@ import React from "react";
 
 function Map() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 h-auto w-full gap-8 mt-2 px-6 sm:px-12">
+    <div className="grid grid-cols-1 sm:grid-cols-2 h-auto w-full gap-8 mt-2 mb-40 px-6 sm:px-12">
       {/* Map Column */}
       <div className="flex justify-center items-center ml-32">
         <iframe
