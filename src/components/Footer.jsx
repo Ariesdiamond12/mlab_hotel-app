@@ -1,5 +1,5 @@
 import React from "react";
-import Sea from '../assets/sea.jpg';
+import Sea from "../assets/sea.jpg";
 
 function Footer() {
   return (
@@ -7,18 +7,23 @@ function Footer() {
       {/* Footer Container */}
       <div
         className="w-full h-full bg-cover bg-center text-white"
-        style={{ backgroundImage: `url(${Sea})`, height: "250px" }} 
+        style={{ backgroundImage: `url(${Sea})`, height: "250px" }}
       >
         <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center">
           {/* Footer Content */}
           <div className="text-center space-y-4">
             <h2 className="text-2xl font-bold">Ocean Breeze</h2>
             <div className="flex space-x-4 justify-center">
-              
               {/* Social Media Icons */}
-              <a href="#facebook" className="hover:text-blue-500">Facebook</a>
-              <a href="#twitter" className="hover:text-blue-400">Twitter</a>
-              <a href="#instagram" className="hover:text-pink-400">Instagram</a>
+              <a href="#facebook" className="hover:text-blue-500">
+                Facebook
+              </a>
+              <a href="#twitter" className="hover:text-blue-400">
+                Twitter
+              </a>
+              <a href="#instagram" className="hover:text-pink-400">
+                Instagram
+              </a>
             </div>
             <p className="text-sm">© 2024 Ocean Breeze. All rights reserved.</p>
           </div>
@@ -29,4 +34,3 @@ function Footer() {
 }
 
 export default Footer;
-

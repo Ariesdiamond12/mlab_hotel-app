@@ -11,8 +11,6 @@ import elia_3 from "../assets/elia-3.jpg";
 import serenity_room from "../assets/paleokrastritsa-1.jpg";
 import serenity_room2 from "../assets/paleokrastritsa-2.jpg";
 import serenity_room3 from "../assets/paleokrastritsa-3.jpg";
-//React Icons
-//import { RiStarFill } from "react-icons/ri";
 
 function Cards() {
   return (
@@ -31,7 +29,9 @@ function Cards() {
 
       {/* MyKonos Town */}
       <div className="text-center mt-20">
-        <h1 className="font-semibold text-xl mb-4 text-start ml-32">MyKonos Town</h1>
+        <h1 className="font-semibold text-xl mb-4 text-start ml-32">
+          MyKonos Town
+        </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="h-80 mx-auto" style={{ width: "65%" }}>
             <img
@@ -59,7 +59,9 @@ function Cards() {
 
       {/* Elia Beach */}
       <div className="text-center mt-20">
-        <h1 className="font-semibold text-xl mb-4 text-start ml-32">Elia Beach</h1>
+        <h1 className="font-semibold text-xl mb-4 text-start ml-32">
+          Elia Beach
+        </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="h-80 mx-auto" style={{ width: "65%" }}>
             <img
@@ -87,7 +89,9 @@ function Cards() {
 
       {/* Paleokrastritsa */}
       <div className="text-center mt-20 mb-20">
-        <h1 className="font-semibold text-xl mb-4 text-start ml-32">Paleokrastritsa</h1>
+        <h1 className="font-semibold text-xl mb-4 text-start ml-32">
+          Paleokrastritsa
+        </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
           <div className="h-80 mx-auto" style={{ width: "65%" }}>
             <img

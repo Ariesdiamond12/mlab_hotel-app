@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [nav, setNav] = useState(false);
   const [logo, setLogo] = useState(false);
+  const navigate = useNavigate();
   const handleNav = () => {
     setNav(!nav);
     setLogo(!logo);
@@ -22,8 +24,16 @@ function Navbar() {
       {/* Centering the Navbar links */}
       <div className="flex-grow flex justify-center">
         <ul className="hidden md:flex space-x-8 items-center">
-          <li>Home</li>
-          <li><a href=""></a>Rooms</li>
+          <li>
+            <a className="cursor-pointer" onClick={() => navigate("/hero")}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a className="cursor-pointer" onClick={() => navigate("/rooms")}>
+              Rooms
+            </a>
+          </li>
           <li>About Us</li>
         </ul>
       </div>
@@ -48,9 +58,17 @@ function Navbar() {
       >
         <ul>
           <h1>Ocean Breeze</h1>
-          <li>Rooms</li>
+          <li>
+            <a className="cursor-pointer" onClick={() => navigate("/hero")}>
+              Home
+            </a>
+          </li>
+          <li>
+            <a className="cursor-pointer" onClick={() => navigate("/rooms")}>
+              Rooms
+            </a>
+          </li>
           <li>About Us</li>
-          <li>Home</li>
           <div className="flex flex-col">
             <button className="global-btn my-6">Account</button>
             <button className="global-btn">Inquire</button>
