@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import Greece from "../assets/Greece.jpg";
 import { Navigate, useNavigate } from "react-router-dom";
+import { auth, provider } from "../config/Firebase";
+import {
+  getAuth,
+  signInWithPopup,
+  createUserWithEmailAndPassword,
+  signOut,
+} from "firebase/auth";
 
 function Login() {
- 
-  const navigate = useNavigate()
+  const [userName, setUserName] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -20,14 +28,27 @@ function Login() {
             </h3>
             <div className="flex flex-col py-2">
               <label>Username</label>
-              <input className="border p-2 rounded-lg" type="text" />
+              <input
+                className="border p-2 rounded-lg"
+                type="text"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
+              />
             </div>
             <div className="flex flex-col py-2">
               <label>Password</label>
-              <input className="border p-2 rounded-lg" type="password" />
+              <input
+                className="border p-2 rounded-lg"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
             </div>
             <button className=" w-full my-5 py-2 rounded-xl bg-[#10659d] shadow-xl shadow-[#10659d] text-white">
               Sign In
+            </button>
+            <button className="w-full my-5 rounded-xl">
+              Sign In With Google
             </button>
             <div>
               <p>
