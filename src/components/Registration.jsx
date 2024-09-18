@@ -11,9 +11,16 @@ function Registration() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const signIn = async () => {
-    try {
+  const signIn = async (e) => {
+    e.preventDefault();
+    // alert("Trying to register");
+    try 
+    {
       await createUserWithEmailAndPassword(auth, email, password);
+
+      // alert("register success");
+      navigate('/login');
+      // window.location.href = "/login";
     } catch (err) {
       console.error(err);
     }
@@ -28,7 +35,10 @@ function Registration() {
         >
           <div className="absolute top-0 left-0 w-full h-full bg-black/50 z-0"></div>
           <div className="flex justify-center items-center h-full relative z-10">
-            <form className="max-w-[400px] w-full rounded-md mx-auto bg-white p-8 mx-5">
+            <form
+              className="max-w-[400px] w-full rounded-md mx-auto bg-white p-8 mx-5"
+              onSubmit={signIn}
+            >
               <h2 className="text-4xl font-semibold text-center py-8">
                 Get Started
               </h2>
@@ -71,13 +81,13 @@ function Registration() {
 
               <button
                 className="w-full my-4 py-4 rounded-full bg-[#10659d] shadow-lg shadow-[#10659d] text-white"
-                onClick={signIn}
+                type="submit"
               >
                 Create Account
               </button>
               <div>
                 <p>
-                  Already have an account yet?{" "}
+                  Already have an account?{" "}
                   <a className="text-[#10659d]" href="./Login">
                     Sign in
                   </a>

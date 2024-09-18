@@ -32,4 +32,7 @@ body {
   .global-btn {
     @apply p-3 border bg-gradient-to-r from-[var(--primary-dark)] to-[var(--primary-light)] text-white rounded-2xl;
   }
+  .google{
+  box-shadow: 0px 10px 35px -3px rgba(0, 0, 0, 0.1);
+  }
 }

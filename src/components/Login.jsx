@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Greece from "../assets/Greece.jpg";
-import { Navigate, useNavigate } from "react-router-dom";
-import { auth, provider } from "../config/Firebase";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../config/Firebase";
 import {
   getAuth,
   signInWithPopup,
-  createUserWithEmailAndPassword,
-  signOut,
+  signInWithEmailAndPassword,
 } from "firebase/auth";
 
 function Login() {
@@ -14,12 +13,22 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  const signIn = async (event) => {
+    event.preventDefault();
+    try {
+      await signInWithEmailAndPassword(auth, userName, password);
+      navigate("/hero");
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
   return (
     <div>
       <div className="grid grid-cols-1 sm:grid-cols-2 h-screen w-full overflow-hidden">
         {/* Left Column */}
         <div className="flex flex-col justify-center">
-          <form className="max-w-[400px] w-full mx-auto p-4">
+          <form className="max-w-[400px] w-full mx-auto p-4" onSubmit={signIn}>
             <h1 className="text-3xl font-normal text-center">
               Login to your Account
             </h1>
@@ -44,11 +53,22 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
               />
             </div>
-            <button className=" w-full my-5 py-2 rounded-xl bg-[#10659d] shadow-xl shadow-[#10659d] text-white">
+            <p className="cursor-pointer text-[#10659d]"><a href=""></a>Forgot Password?</p>
+            <button
+              className=" w-full my-5 py-2 rounded-xl bg-[#10659d] shadow-xl shadow-[#10659d] text-white"
+              type="submit"
+            >
               Sign In
             </button>
-            <button className="w-full my-5 rounded-xl">
-              Sign In With Google
+
+
+            <button className="w-full my-5 rounded-xl flex justify-center google">
+              <img
+                src="https://cdn-icons-png.freepik.com/512/13170/13170545.png"
+                alt=""
+                className="h-10"
+              />
+              <p className="mt-2 font-medium">Sign In with Google</p>
             </button>
             <div>
               <p>
