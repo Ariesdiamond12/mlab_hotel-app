@@ -5,6 +5,7 @@ import Registration from "./components/Registration";
 import Hero from "./components/Hero";
 import Rooms from "./components/Rooms";
 import Welcome from "./components/Welcome";
+// import BookNow from "./components/BookNow";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/registration" element={<Registration />} />
           <Route path="/hero" element={<Hero />} />
           <Route path="/rooms" element={<Rooms />} />
+          {/* <Route path="/book" element={<BookNow />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
