@@ -3,6 +3,7 @@ import { Navigate, useNavigate } from "react-router-dom";
 import Village from "../assets/Church.jpg";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/Firebase";
+import toast, { Toaster } from "react-hot-toast";
 
 function Registration() {
   const [name, setName] = useState("");
@@ -14,13 +15,12 @@ function Registration() {
   const signIn = async (e) => {
     e.preventDefault();
     // alert("Trying to register");
-    try 
-    {
+    try {
       await createUserWithEmailAndPassword(auth, email, password);
-
-      // alert("register success");
-      navigate('/login');
-      // window.location.href = "/login";
+      setTimeout(() => {
+        navigate("/login");
+      }, 2000);
+      toast.success("Successfully Created An Account!");
     } catch (err) {
       console.error(err);
     }

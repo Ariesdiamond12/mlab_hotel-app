@@ -7,6 +7,7 @@ import {
   signInWithPopup,
   signInWithEmailAndPassword,
 } from "firebase/auth";
+import toast, { Toaster } from 'react-hot-toast';
 
 function Login() {
   const [userName, setUserName] = useState("");
@@ -17,7 +18,12 @@ function Login() {
     event.preventDefault();
     try {
       await signInWithEmailAndPassword(auth, userName, password);
+      setTimeout(() => {
       navigate("/hero");
+
+      }, 2000)
+      toast.success('Signed In Successfully!');
+      //toast.loading('redirecting...')
     } catch (err) {
       console.error(err);
     }
@@ -70,6 +76,7 @@ function Login() {
               />
               <p className="mt-2 font-medium">Sign In with Google</p>
             </button>
+            <Toaster/>
             <div>
               <p>
                 Don't have an account yet?{" "}

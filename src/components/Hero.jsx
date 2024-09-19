@@ -5,9 +5,9 @@ import Explore from "./Explore";
 import Content from "./Content";
 import Map from "./Map";
 import Footer from "./Footer";
-import BookNowModal from "./BookNowModal";
 
 function Hero() {
+
   return (
     <div className="w-full h-screen relative rounded-xl">
       <Navbar />
@@ -42,6 +42,7 @@ function Hero() {
           </button>
         </div>
       </div>
+      
       <Explore />
       <Content />
       <Map />
