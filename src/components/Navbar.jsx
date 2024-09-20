@@ -1,3 +1,5 @@
+import { Input } from "@nextui-org/react";
+import { IoSearch } from "react-icons/io5";
 import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
@@ -36,6 +38,12 @@ function Navbar() {
           </li>
           <li>About Us</li>
         </ul>
+      </div>
+
+      <div className="justify-end items-end">
+        <Input startContent={
+          <IoSearch className="text-black/50 mb-0.5 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
+        }/>
       </div>
 
       {/* Hamburger Menu */}

@@ -18,14 +18,20 @@ function BookNow() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 h-screen w-full">
-      <div className="flex flex-col justify-center">
-        <Button onPress={onOpen}>Open Modal</Button>
+    <div className="grid grid-cols-1 sm:grid-cols-1  w-full items-center justify-center">
+      <div className="flex flex-col justify-center items-center">
+        <Button
+          className="rounded-full shadow-lg bg-white text-black font-semibold py-2 px-6 mt-7 hover:bg-gray-200 transition"
+          onPress={onOpen}
+        >
+          Book Now
+        </Button>
+
         <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-          <ModalContent className="w-[50%] max-w-[1200px]">
+          <ModalContent className="fixed inset-0 flex items-center justify-center w-[90%] md:w-[70%] lg:w-[50%] max-w-[800px] mx-auto bg-white rounded-lg shadow-lg p-6">
             {(onClose) => (
               <>
-                <ModalHeader className="flex flex-col gap-1 p-10">
+                <ModalHeader className="flex flex-col gap-1 p-10 text-center">
                   Book Your Stay: Let Us Assist You In Planning The Perfect
                   Experience.
                 </ModalHeader>
@@ -72,7 +78,7 @@ function BookNow() {
                         </Select>
                       </div>
                       <div>
-                        <Button className="bg-[#10659d] text-white rounded-full w-10">
+                        <Button className="bg-[#10659d] text-white rounded-full px-4 py-2">
                           Reserve
                         </Button>
                       </div>

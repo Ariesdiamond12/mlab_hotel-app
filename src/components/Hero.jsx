@@ -5,6 +5,7 @@ import Explore from "./Explore";
 import Content from "./Content";
 import Map from "./Map";
 import Footer from "./Footer";
+import BookNow from "./BookNow";
 
 function Hero() {
 
@@ -37,11 +38,10 @@ function Hero() {
             Book Your Travel And Transportation Service With Us And Enjoy A
             Hassle-Free And Memorable Journey.
           </p>
-          <button className="rounded-full shadow-lg bg-white text-black font-semibold py-2 px-6 mt-7 hover:bg-gray-200 transition">
-            Book Now
-          </button>
+          <BookNow/>
         </div>
       </div>
+      
       
       <Explore />
       <Content />

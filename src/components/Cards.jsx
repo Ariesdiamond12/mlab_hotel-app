@@ -1,4 +1,6 @@
 import React from "react";
+import { Button } from "@nextui-org/react";
+import { HeartIcon } from "./HeartIcon";
 // Mykonos Town images
 import oceanview_bedroom from "../assets/mykonos-1.jpg";
 import accessible_room from "../assets/mykonos-2.jpg";
@@ -13,6 +15,8 @@ import serenity_room2 from "../assets/paleokrastritsa-2.jpg";
 import serenity_room3 from "../assets/paleokrastritsa-3.jpg";
 
 function Cards() {
+  const [liked, setLiked] = React.useState(false);
+
   return (
     <div className="flex flex-col">
       {/* Title Section */}
@@ -21,39 +25,49 @@ function Cards() {
           Explore Our <span className="text-[#00a5cf]">Exclusive</span> Rooms
         </h1>
         <p className="mt-2 text-gray-600">
-          Discover A Range Of Luxurious Accomodations Designed To Offer You
+          Discover A Range Of Luxurious Accommodations Designed To Offer You
           Comfort And Style. Choose From Our <br /> Curated Selection Of Rooms
           And Suites To Find The Perfect Stay For Your Needs.
         </p>
       </div>
 
-      {/* MyKonos Town */}
+      {/* Mykonos Town */}
       <div className="text-center mt-20">
         <h1 className="font-semibold text-xl mb-4 text-start ml-32">
-          MyKonos Town
+          Mykonos Town
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="h-80 mx-auto" style={{ width: "65%" }}>
-            <img
-              src={oceanview_bedroom}
-              alt="Oceanview Bedroom"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="h-80 mx-auto" style={{ width: "65%" }}>
-            <img
-              src={accessible_room}
-              alt="Accessible Room"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="h-80 mx-auto" style={{ width: "65%" }}>
-            <img
-              src={gardenview_room}
-              alt="Gardenview Room"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
+          {[oceanview_bedroom, accessible_room, gardenview_room].map(
+            (image, index) => (
+              <div
+                className="relative h-80 mx-auto"
+                style={{ width: "65%" }}
+                key={index}
+              >
+                <img
+                  src={image}
+                  alt={`Mykonos Room ${index + 1}`}
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+                {/* Heart Icon - positioned absolutely */}
+                <HeartIcon
+                  className={`absolute top-4 right-4 text-white cursor-pointer ${
+                    liked ? "fill-current text-red-500" : "text-gray-500"
+                  }`}
+                  fill={liked ? "currentColor" : "none"}
+                  onClick={() => setLiked(!liked)}
+                />
+                <Button
+                  className="text-tiny"
+                  color="primary"
+                  radius="full"
+                  size="sm"
+                >
+                  Book Now
+                </Button>
+              </div>
+            )
+          )}
         </div>
       </div>
 
@@ -63,57 +77,73 @@ function Cards() {
           Elia Beach
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="h-80 mx-auto" style={{ width: "65%" }}>
-            <img
-              src={elia}
-              alt="Elia Beach Room 1"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="h-80 mx-auto" style={{ width: "65%" }}>
-            <img
-              src={elia_2}
-              alt="Elia Beach Room 2"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="h-80 mx-auto" style={{ width: "65%" }}>
-            <img
-              src={elia_3}
-              alt="Elia Beach Room 3"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
+          {[elia, elia_2, elia_3].map((image, index) => (
+            <div
+              className="relative h-80 mx-auto"
+              style={{ width: "65%" }}
+              key={index}
+            >
+              <img
+                src={image}
+                alt={`Elia Beach Room ${index + 1}`}
+                className="w-full h-full object-cover rounded-lg shadow-lg"
+              />
+              <HeartIcon
+                className={`absolute top-4 right-4 text-white cursor-pointer ${
+                  liked ? "fill-current text-red-500" : "text-gray-500"
+                }`}
+                fill={liked ? "currentColor" : "none"}
+                onClick={() => setLiked(!liked)}
+              />
+              <Button
+                className="text-tiny"
+                color="primary"
+                radius="full"
+                size="sm"
+              >
+                Book Now
+              </Button>
+            </div>
+          ))}
         </div>
       </div>
 
-      {/* Paleokrastritsa */}
+      {/* Paleokastritsa */}
       <div className="text-center mt-20 mb-20">
         <h1 className="font-semibold text-xl mb-4 text-start ml-32">
-          Paleokrastritsa
+          Paleokastritsa
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          <div className="h-80 mx-auto" style={{ width: "65%" }}>
-            <img
-              src={serenity_room}
-              alt="Serenity Room"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="h-80 mx-auto" style={{ width: "65%" }}>
-            <img
-              src={serenity_room2}
-              alt="Serenity Room 2"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
-          <div className="h-80 mx-auto" style={{ width: "65%" }}>
-            <img
-              src={serenity_room3}
-              alt="Serenity Room 3"
-              className="w-full h-full object-cover rounded-lg shadow-lg"
-            />
-          </div>
+          {[serenity_room, serenity_room2, serenity_room3].map(
+            (image, index) => (
+              <div
+                className="relative h-80 mx-auto"
+                style={{ width: "65%" }}
+                key={index}
+              >
+                <img
+                  src={image}
+                  alt={`Paleokastritsa Room ${index + 1}`}
+                  className="w-full h-full object-cover rounded-lg shadow-lg"
+                />
+                <HeartIcon
+                  className={`absolute top-4 right-4 text-white cursor-pointer ${
+                    liked ? "fill-current text-red-500" : "text-gray-500"
+                  }`}
+                  fill={liked ? "currentColor" : "none"}
+                  onClick={() => setLiked(!liked)}
+                />
+                <Button
+                  className="text-tiny"
+                  color="primary"
+                  radius="full"
+                  size="sm"
+                >
+                  Book Now
+                </Button>
+              </div>
+            )
+          )}
         </div>
       </div>
     </div>
