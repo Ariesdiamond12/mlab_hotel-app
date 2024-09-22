@@ -1,5 +1,5 @@
 import React from "react";
-import Santorini from "../assets/santorini.jpg";
+import Santorini from "../assets/village.jpg";
 import {
   DatePicker,
   Modal,
@@ -78,21 +78,14 @@ function BookNow() {
                         </Select>
                       </div>
                       <div>
-                        <Button className="bg-[#10659d] text-white rounded-full px-4 py-2">
+                        <Button className="bg-[#10659d] text-white rounded-full px-4 py-2 w-32">
                           Reserve
                         </Button>
                       </div>
                     </div>
                   </div>
                 </ModalBody>
-                <ModalFooter>
-                  <Button color="danger" variant="light" onPress={onClose}>
-                    Close
-                  </Button>
-                  <Button color="primary" onPress={onClose}>
-                    Action
-                  </Button>
-                </ModalFooter>
+                <ModalFooter></ModalFooter>
               </>
             )}
           </ModalContent>

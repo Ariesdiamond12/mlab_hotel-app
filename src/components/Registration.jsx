@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Village from "../assets/Church.jpg";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../config/Firebase";
@@ -13,7 +13,6 @@ function Registration() {
   const navigate = useNavigate();
 
   const signIn = async (e) => {
-    e.preventDefault();
     // alert("Trying to register");
     try {
       await createUserWithEmailAndPassword(auth, email, password);

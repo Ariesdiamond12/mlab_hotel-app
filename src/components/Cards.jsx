@@ -57,14 +57,16 @@ function Cards() {
                   fill={liked ? "currentColor" : "none"}
                   onClick={() => setLiked(!liked)}
                 />
-                <Button
-                  className="text-tiny"
-                  color="primary"
-                  radius="full"
-                  size="sm"
-                >
-                  Book Now
-                </Button>
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                  <Button
+                    className="text-tiny"
+                    color="primary"
+                    radius="full"
+                    size="sm"
+                  >
+                    Book Now
+                  </Button>
+                </div>
               </div>
             )
           )}
@@ -95,14 +97,16 @@ function Cards() {
                 fill={liked ? "currentColor" : "none"}
                 onClick={() => setLiked(!liked)}
               />
-              <Button
-                className="text-tiny"
-                color="primary"
-                radius="full"
-                size="sm"
-              >
-                Book Now
-              </Button>
+              <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                <Button
+                  className="text-tiny"
+                  color="primary"
+                  radius="full"
+                  size="sm"
+                >
+                  Book Now
+                </Button>
+              </div>
             </div>
           ))}
         </div>
@@ -133,14 +137,16 @@ function Cards() {
                   fill={liked ? "currentColor" : "none"}
                   onClick={() => setLiked(!liked)}
                 />
-                <Button
-                  className="text-tiny"
-                  color="primary"
-                  radius="full"
-                  size="sm"
-                >
-                  Book Now
-                </Button>
+                <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
+                  <Button
+                    className="text-tiny"
+                    color="primary"
+                    radius="full"
+                    size="sm"
+                  >
+                    Book Now
+                  </Button>
+                </div>
               </div>
             )
           )}

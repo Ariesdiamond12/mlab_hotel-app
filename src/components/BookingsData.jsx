@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../config/Firebase";
 import { collection, getDocs } from "firebase/firestore";
+import Navbar from "./Navbar";
 
 function BookingsData() {
   const [bookings, setBookings] = useState([]);
@@ -26,6 +27,7 @@ function BookingsData() {
   }
   return (
     <div>
+      <Navbar />
       <h1>Bookings Data</h1>
       <ul>
         {bookings.map((booking, index) => (

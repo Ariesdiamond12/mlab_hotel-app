@@ -1,5 +1,5 @@
 export const guests = [
-  { key: "adults", label: "Aldults Age 17+" },
+  { key: "adults", label: "Adults Age 17+" },
   { key: "children", label: "Children Age 2-15 " },
   { key: "infants", label: "Infants Under 2" },
   { key: "pets", label: "Pets" },
