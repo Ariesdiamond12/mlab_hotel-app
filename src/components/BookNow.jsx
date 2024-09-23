@@ -6,7 +6,6 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
-  ModalFooter,
   Button,
   useDisclosure,
   Select,
@@ -28,7 +27,7 @@ function BookNow() {
         </Button>
 
         <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
-          <ModalContent className="fixed inset-0 flex items-center justify-center w-[90%] md:w-[70%] lg:w-[50%] max-w-[800px] mx-auto bg-white rounded-lg shadow-lg p-6">
+          <ModalContent className="fixed inset-0 flex items-center justify-center w-[90%] md:w-[70%] lg:w-[50%] max-w-[800px] mx-auto bg-white rounded-lg shadow-lg pb-0">
             {(onClose) => (
               <>
                 <ModalHeader className="flex flex-col gap-1 p-10 text-center">
@@ -85,7 +84,6 @@ function BookNow() {
                     </div>
                   </div>
                 </ModalBody>
-                <ModalFooter></ModalFooter>
               </>
             )}
           </ModalContent>

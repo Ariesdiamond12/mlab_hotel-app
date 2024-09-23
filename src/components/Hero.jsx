@@ -1,17 +1,17 @@
 import React from "react";
 import santorini from "../assets/santorini.jpg";
-import Navbar from "./Navbar";
+import Navbar from './Navigation'
 import Explore from "./Explore";
 import Content from "./Content";
 import Map from "./Map";
 import Footer from "./Footer";
 import BookNow from "./BookNow";
+import Navigation from "./Navigation";
 
 function Hero() {
-
   return (
     <div className="w-full h-screen relative rounded-xl">
-      <Navbar />
+      <Navigation/>
 
       {/* Background Image and Overlay Container */}
       <div className="relative h-[90vh] w-full">
@@ -38,15 +38,14 @@ function Hero() {
             Book Your Travel And Transportation Service With Us And Enjoy A
             Hassle-Free And Memorable Journey.
           </p>
-          <BookNow/>
+          <BookNow />
         </div>
       </div>
-      
-      
+
       <Explore />
       <Content />
       <Map />
-      <Footer/>
+      <Footer />
     </div>
   );
 }

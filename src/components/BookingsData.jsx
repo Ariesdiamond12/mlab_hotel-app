@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { db } from "../config/Firebase";
 import { collection, getDocs } from "firebase/firestore";
-import Navbar from "./Navbar";
+import Navbar from "./Navigation";
 
 function BookingsData() {
   const [bookings, setBookings] = useState([]);

@@ -5,7 +5,7 @@ import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
-function Navbar() {
+function Navigation() {
   const [nav, setNav] = useState(false);
   const [logo, setLogo] = useState(false);
   const navigate = useNavigate();
@@ -87,4 +87,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Navigation;
