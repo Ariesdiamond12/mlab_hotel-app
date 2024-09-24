@@ -6,6 +6,7 @@ import Hero from "./components/Hero";
 import Rooms from "./components/Rooms";
 import Welcome from "./components/Welcome";
 import AdminPanel from "./components/AdminPanel";
+import SideMenu from "./components/SideMenu";
 // import BookingsData from "./components/BookingsData";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="/hero" element={<Hero />} />
           {/* <Route path="/data" element={<BookingsData />} />  */}
           {/* <Route path="/admin" element={<AdminPanel />} /> */}
+          {/* <Route path="/menu" element={<SideMenu />} /> */}
         </Routes>
       </BrowserRouter>
     </div>
