@@ -1,39 +1,44 @@
-import React, { useEffect, useState } from "react";
-import { db } from "../config/Firebase";
-import { collection, getDocs } from "firebase/firestore";
-import Navbar from "./Navigation";
+import React from "react";
+import {
+  Modal,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalFooter,
+  Button,
+  useDisclosure,
+} from "@nextui-org/react";
 
 function BookingsData() {
-  const [bookings, setBookings] = useState([]);
-  const fetchBookings = async () => {
-    try {
-      const collectionRef = collection(db, "bookings");
-      const readCollection = await getDocs(collectionRef);
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
-      const data = readCollection.docs.map((doc) => doc.data());
-      // console.log(data)
-      setBookings(data);
-    } catch (err) {
-      console.error(err);
-    }
-  };
-
-  useEffect(() => {
-    fetchBookings();
-  }, []);
-
-  {
-    console.log(bookings);
-  }
   return (
     <div>
-      <Navbar />
-      <h1>Bookings Data</h1>
-      <ul>
-        {bookings.map((booking, index) => (
-          <li>place: {booking.place}</li>
-        ))}
-      </ul>
+      <>
+        <Button onPress={onOpen}>Open Modal</Button>
+        <Modal isOpen={isOpen} onOpenChange={onOpenChange}>
+          <ModalContent>
+            {(onClose) => (
+              <>
+                <ModalHeader className="flex flex-col gap-1">
+                  Modal Title
+                </ModalHeader>
+                <ModalBody>
+                  
+                </ModalBody>
+                <ModalFooter>
+                  <Button color="danger" variant="light" onPress={onClose}>
+                    Close
+                  </Button>
+                  <Button color="primary" onPress={onClose}>
+                    Action
+                  </Button>
+                </ModalFooter>
+              </>
+            )}
+          </ModalContent>
+        </Modal>
+      </>
     </div>
   );
 }

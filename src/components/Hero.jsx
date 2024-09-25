@@ -1,17 +1,17 @@
 import React from "react";
 import santorini from "../assets/santorini.jpg";
-import Navbar from './Navigation'
+import Navbar from "./Navbar";
 import Explore from "./Explore";
 import Content from "./Content";
 import Map from "./Map";
 import Footer from "./Footer";
 import BookNow from "./BookNow";
-import Navigation from "./Navigation";
+import Navigation from "./Navbar";
 
 function Hero() {
   return (
     <div className="w-full h-screen relative rounded-xl">
-      <Navigation/>
+      <Navigation />
 
       {/* Background Image and Overlay Container */}
       <div className="relative h-[90vh] w-full">

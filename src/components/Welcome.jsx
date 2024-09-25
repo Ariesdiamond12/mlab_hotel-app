@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import Poolside from "../assets/poolside.jpeg";
-import Navbar from "./Navigation";
+import Navbar from "./Navbar";
 
 function Welcome() {
   const navigate = useNavigate();

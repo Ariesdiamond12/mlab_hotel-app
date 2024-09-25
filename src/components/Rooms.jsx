@@ -1,14 +1,13 @@
 import React from "react";
-import Navbar from "./Navigation";
 import Ocean from "../assets/oceanview.jpg";
 import Cards from "./Cards";
 import Footer from "./Footer";
-import Navigation from "./Navigation";
+import Navigation from "./Navbar";
 
 function Rooms() {
   return (
     <div className="w-full h-full relative">
-      <Navigation/>
+      <Navigation />
 
       {/* Background Image Section */}
       <div
