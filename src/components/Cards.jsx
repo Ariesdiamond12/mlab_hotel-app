@@ -13,6 +13,7 @@ import elia_3 from "../assets/elia-3.jpg";
 import serenity_room from "../assets/paleokrastritsa-1.jpg";
 import serenity_room2 from "../assets/paleokrastritsa-2.jpg";
 import serenity_room3 from "../assets/paleokrastritsa-3.jpg";
+import BookingsData from "./BookingsData";
 
 function Cards() {
   const [liked, setLiked] = React.useState(false);
@@ -58,14 +59,7 @@ function Cards() {
                   onClick={() => setLiked(!liked)}
                 />
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <Button
-                    className="text-tiny"
-                    color="primary"
-                    radius="full"
-                    size="sm"
-                  >
-                    Book Now
-                  </Button>
+                  <BookingsData/>
                 </div>
               </div>
             )
@@ -98,14 +92,7 @@ function Cards() {
                 onClick={() => setLiked(!liked)}
               />
               <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                <Button
-                  className="text-tiny"
-                  color="primary"
-                  radius="full"
-                  size="sm"
-                >
-                  Book Now
-                </Button>
+                <BookingsData/>
               </div>
             </div>
           ))}
@@ -138,14 +125,7 @@ function Cards() {
                   onClick={() => setLiked(!liked)}
                 />
                 <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2">
-                  <Button
-                    className="text-tiny"
-                    color="primary"
-                    radius="full"
-                    size="sm"
-                  >
-                    Book Now
-                  </Button>
+                  <BookingsData/>
                 </div>
               </div>
             )
