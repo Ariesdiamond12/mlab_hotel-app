@@ -1,13 +1,17 @@
 import React, { useRef, useEffect } from "react";
 
 const PayPalButton = ({ amount }) => {
-  const paypalRef = useRef();
+  const paypalRef = useRef(null);
+  const isPayPalInitialized = useRef(false); // Track if PayPal buttons have been initialized
 
   useEffect(() => {
-    showPaypawindow();
+    if (!isPayPalInitialized.current) {
+      showPayPalWindow();
+      isPayPalInitialized.current = true; // Mark PayPal as initialized to prevent duplication
+    }
   }, []);
 
-  const showPaypawindow = () => {
+  const showPayPalWindow = () => {
     window.paypal
       .Buttons({
         createOrder: (data, actions) => {

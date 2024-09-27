@@ -54,22 +54,8 @@ function BookingsData() {
                         Book Now
                       </Button>
                     </div>
-                    <div>
-                      <Button
-                        className="bg-[#ffc300] rounded-full px-4 py-2 w-32"
-                        onClick={() => {
-                          setCheckOut(true);
-                        }}
-                      >
-                        <img
-                          src="https://cdn-icons-png.freepik.com/512/5968/5968365.png?ga=GA1.1.443691707.1726650991"
-                          alt=""
-                          className="h-5"
-                        />
-                        Paypal
-                      </Button>
-                    </div>
-                    {checkout && <PayPalButton amount={amount} />} {/* Display PayPalButton */}
+                    {checkout && <PayPalButton amount={amount} />}{" "}
+                    {/* Display PayPalButton */}
                   </ModalBody>
                   <ModalFooter>
                     <Button color="danger" variant="light" onPress={onClose}>
