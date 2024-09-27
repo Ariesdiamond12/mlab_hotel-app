@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Modal,
   ModalContent,
@@ -12,9 +12,12 @@ import {
   SelectItem,
 } from "@nextui-org/react";
 import { guests } from "./data";
+import PayPalButton from "./PaypalButton"; // Import the PayPalButton component
 
 function BookingsData() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [checkout, setCheckOut] = useState(false);
+  const [amount, setAmount] = useState("100.00"); // Example booking amount
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-1  w-full items-center justify-center">
@@ -52,7 +55,12 @@ function BookingsData() {
                       </Button>
                     </div>
                     <div>
-                      <Button className="bg-[#ffc300] rounded-full px-4 py-2 w-32">
+                      <Button
+                        className="bg-[#ffc300] rounded-full px-4 py-2 w-32"
+                        onClick={() => {
+                          setCheckOut(true);
+                        }}
+                      >
                         <img
                           src="https://cdn-icons-png.freepik.com/512/5968/5968365.png?ga=GA1.1.443691707.1726650991"
                           alt=""
@@ -61,12 +69,12 @@ function BookingsData() {
                         Paypal
                       </Button>
                     </div>
+                    {checkout && <PayPalButton amount={amount} />} {/* Display PayPalButton */}
                   </ModalBody>
                   <ModalFooter>
                     <Button color="danger" variant="light" onPress={onClose}>
                       Close
                     </Button>
-                    
                   </ModalFooter>
                 </>
               )}
