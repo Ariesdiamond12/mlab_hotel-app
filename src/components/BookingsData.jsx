@@ -10,13 +10,14 @@ import {
   DatePicker,
   Select,
   SelectItem,
+  Input,
 } from "@nextui-org/react";
 import { guests } from "./data";
 import PayPalButton from "./PaypalButton"; // Import the PayPalButton component
 
 function BookingsData() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
-  const [checkout, setCheckOut] = useState(false);
+  const [checkout, setCheckOut] = useState(true);
   const [amount, setAmount] = useState("100.00"); // Example booking amount
 
   return (
@@ -35,6 +36,34 @@ function BookingsData() {
                   </ModalHeader>
                   <ModalBody className="flex flex-col justify-center items-center gap-4">
                     <div className="flex w-full justify-center items-center">
+                      <Input
+                        type="name"
+                        label="Name"
+                        className="max-w-[300px]"
+                      />
+                    </div>
+                    <div className="flex w-full justify-center items-center">
+                      <Input
+                        type="surname"
+                        label="Surname"
+                        className="max-w-[300px]"
+                      />
+                    </div>
+                    <div className="flex w-full justify-center items-center">
+                      <Input
+                        type="email"
+                        label="Email"
+                        className="max-w-[300px]"
+                      />
+                    </div>
+                    <div className="flex w-full justify-center items-center">
+                      <Input
+                        type="number"
+                        label="Phone Number"
+                        className="max-w-[300px]"
+                      />
+                    </div>
+                    <div className="flex w-full justify-center items-center">
                       <DatePicker label="Check In" className="max-w-[300px]" />
                     </div>
                     <div className="flex  w-full justify-center items-center">
@@ -49,11 +78,11 @@ function BookingsData() {
                         ))}
                       </Select>
                     </div>
-                    <div>
+                    {/* <div>
                       <Button className="bg-[#10659d] text-white rounded-full px-4 py-2 w-32">
                         Book Now
                       </Button>
-                    </div>
+                    </div> */}
                     {checkout && <PayPalButton amount={amount} />}{" "}
                     {/* Display PayPalButton */}
                   </ModalBody>
