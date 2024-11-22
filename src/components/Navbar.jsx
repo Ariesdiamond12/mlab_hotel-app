@@ -1,8 +1,9 @@
-import { Input } from "@nextui-org/react";
-import { IoSearch } from "react-icons/io5";
 import React, { useState } from "react";
 import { IoMenu } from "react-icons/io5";
+import { LuSearch } from "react-icons/lu";
 import { IoClose } from "react-icons/io5";
+import { FiUser } from "react-icons/fi";
+import { IoHeartOutline } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
 
 function Navbar() {
@@ -19,7 +20,7 @@ function Navbar() {
       {/* Navbar */}
       <div className="pl-16">
         <h1 onClick={handleNav} className={logo ? "hidden" : "block"}>
-          Ocean Breeze
+          Luviana
         </h1>
       </div>
 
@@ -27,12 +28,18 @@ function Navbar() {
       <div className="flex-grow flex justify-center">
         <ul className="hidden md:flex space-x-8 items-center">
           <li>
-            <a className="cursor-pointer" onClick={() => navigate("/hero")}>
+            <a
+              className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300"
+              onClick={() => navigate("/hero")}
+            >
               Home
             </a>
           </li>
           <li>
-            <a className="cursor-pointer" onClick={() => navigate("/rooms")}>
+            <a
+              className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300"
+              onClick={() => navigate("/rooms")}
+            >
               Rooms
             </a>
           </li>
@@ -40,10 +47,10 @@ function Navbar() {
         </ul>
       </div>
 
-      <div className="justify-end items-end">
-        <Input startContent={
-          <IoSearch className="text-black/50 mb-0.5 dark:text-white/90 text-slate-400 pointer-events-none flex-shrink-0" />
-        }/>
+      <div className="flex space-x-4 items-center">
+        <LuSearch className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300" />
+        <FiUser className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300" onClick={() => navigate("/registration")} />
+        <IoHeartOutline className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300" />
       </div>
 
       {/* Hamburger Menu */}

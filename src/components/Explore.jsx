@@ -1,60 +1,41 @@
 import React from "react";
-import Sunset from "../assets/sunset.jpg";
-import Scooter from "../assets/Scooter.jpg";
+import Resident from "../assets/resident.jpg";
 
 function Explore() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 h-auto w-full gap-8 mt-10">
-      {/* Left Column - Text for Santorini */}
-      <div className="flex flex-col justify-center w-full px-8 sm:px-16">
-        <h1 className="font-semibold text-2xl">Explore Santorini Greece</h1>
-        <p className="mt-4 text-lg">
-          Santorini is one of the most iconic and picturesque islands in Greece,
-          renowned for its stunning sunsets, whitewashed buildings, and volcanic
-          landscapes. It is part of the Cyclades group of islands in the Aegean
-          Sea and has a rich history, unique culture, and breathtaking natural
-          beauty.
-        </p>
-      </div>
-
-      {/* Right Column - Image of Santorini Sunset */}
-      <div className="flex justify-center items-center px-4">
-        <img
-          src={Sunset}
-          alt="Sunset"
-          className="rounded-xl object-cover shadow-xl"
-          style={{
-            width: "400px",
-            height: "300px",
-          }}
-        />
-      </div>
-
+    <div className="grid grid-cols-1 sm:grid-cols-2 h-auto w-full gap-8 mt-20">
       {/* Left Column - Image of Scooter */}
       <div className="flex justify-center items-center px-4">
         <img
-          src={Scooter}
-          alt="Scooter"
+          src={Resident}
+          alt="Villa"
           className="rounded-xl object-cover shadow-xl"
           style={{
             width: "400px",
-            height: "300px",
+            height: "500px",
           }}
         />
       </div>
 
       {/* Right Column - Text for Scooter in Santorini */}
-      <div className="flex flex-col justify-center w-full px-8 sm:px-16">
-        <h1 className="font-semibold text-2xl">
-          Scootin' through Santorini Like A Local
-        </h1>
-        <p className="mt-4 text-lg">
-          Riding a scooter in Santorini, Greece, is a fantastic way to explore
-          the island's winding roads, picturesque villages, and stunning coastal
-          views. As you ride through Santorini, you’ll pass by dramatic cliffs,
-          vineyards, and traditional whitewashed buildings, all set against the
-          backdrop of the deep blue Aegean Sea.
+      <div className="flex flex-col items-start justify-center w-full sm:px-16 text-left">
+        {/* Decorative Line */}
+        <hr className="w-1/4 border-none h-[5px] bg-[#0368a6] mb-4" />
+        <p className="font-medium text-lg text-gray-600 mb-2">
+          Raising Comfort To the Highest Level
         </p>
+        <h1 className="text-3xl font-bold text-[#0368a6] mb-4">
+          Welcome To Luviana Hotel
+        </h1>
+        <p className="text-base sm:text-lg text-gray-700 mb-6">
+          Luviana Hotel is the right choice for visitors who are searching for a
+          luxurious and comfortable place to stay in Santorini. Our hotel is
+          located in the heart of Santorini, Greece. You will get the best view
+          of the caldera and the sea from our hotel.
+        </p>
+        <button className="w-fit px-4 py-2 rounded-xl bg-[#10659d] text-white font-medium hover:bg-[#074a77] transition-all duration-300">
+          Read More
+        </button>
       </div>
     </div>
   );

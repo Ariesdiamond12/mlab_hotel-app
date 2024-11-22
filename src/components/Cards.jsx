@@ -26,13 +26,12 @@ function Cards() {
           Explore Our <span className="text-[#00a5cf]">Exclusive</span> Rooms
         </h1>
         <p className="mt-2 text-gray-600">
-          Discover A Range Of Luxurious Accommodations Designed To Offer You
+          Discover A Range Of Luxurious Suites To Offer You
           Comfort And Style. Choose From Our <br /> Curated Selection Of Rooms
           And Suites To Find The Perfect Stay For Your Needs.
         </p>
       </div>
 
-      {/* Mykonos Town */}
       <div className="text-center mt-20">
         <h1 className="font-semibold text-xl mb-4 text-start ml-32">
           Mykonos Town

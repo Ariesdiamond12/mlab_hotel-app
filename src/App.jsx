@@ -3,7 +3,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./components/Login";
 import Hero from "./components/Hero";
 import Rooms from "./components/Rooms";
-import Welcome from "./components/Welcome";
 import AdminPanel from "./components/AdminPanel";
 import Registration from "./components/Registration";
 // import BookingsData from "./components/BookingsData";
@@ -13,12 +12,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          {/*
-          
-           */}
           {/* <Route path="/data" element={<BookingsData />} /> */}
           <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Welcome />} />
+          <Route path="/" element={<Hero/>} />
           <Route path="/registration" element={<Registration/>} />
           <Route path="/hero" element={<Hero />} />
           <Route path="/rooms" element={<Rooms />} />

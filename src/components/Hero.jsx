@@ -7,6 +7,7 @@ import Map from "./Map";
 import Footer from "./Footer";
 import BookNow from "./BookNow";
 import Navigation from "./Navbar";
+import Amenities from "./Amenities";
 
 function Hero() {
   return (
@@ -43,6 +44,7 @@ function Hero() {
       </div>
 
       <Explore />
+      <Amenities/>
       <Content />
       <Map />
       <Footer />

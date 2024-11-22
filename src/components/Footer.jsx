@@ -12,7 +12,7 @@ function Footer() {
         <div className="w-full h-full bg-black bg-opacity-50 flex flex-col justify-center items-center">
           {/* Footer Content */}
           <div className="text-center space-y-4">
-            <h2 className="text-2xl font-bold">Ocean Breeze</h2>
+            <h2 className="text-2xl font-bold">Luviana</h2>
             <div className="flex space-x-4 justify-center">
               {/* Social Media Icons */}
               <a href="#facebook" className="hover:text-blue-500">
@@ -25,7 +25,7 @@ function Footer() {
                 Instagram
               </a>
             </div>
-            <p className="text-sm">© 2024 Ocean Breeze. All rights reserved.</p>
+            <p className="text-sm">© 2024 Luviana. All rights reserved.</p>
           </div>
         </div>
       </div>
