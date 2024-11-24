@@ -6,7 +6,7 @@ function Map() {
       {/* Map Column */}
       <div className="flex justify-center items-center ml-32">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22528.89082937824!2d25.451737645834946!3d36.396344748172794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1499ce86adfd9ff7%3A0xb2a761f740d68afc!2sSantorini!5e0!3m2!1sen!2sza!4v1726169239668!5m2!1sen!2sza"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13071.968426179723!2d25.432243207711075!3d36.38862483517209!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1499ce41ee7938ab%3A0x82aa2ace4a74f614!2sWhite%20%26%20Co.%20Exclusive%20Island%20Villas!5e0!3m2!1sen!2sza!4v1732268138619!5m2!1sen!2sza"
           width="600"
           height="450"
           style={{ border: 0 }}

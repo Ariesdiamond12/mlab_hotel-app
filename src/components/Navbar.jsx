@@ -43,13 +43,25 @@ function Navbar() {
               Rooms
             </a>
           </li>
-          <li>About Us</li>
+          <li>
+            <a className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300">
+              Spa & Restaurant
+            </a>
+          </li>
+          <li>
+            <a className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300">
+              Contact Us
+            </a>
+          </li>
         </ul>
       </div>
 
       <div className="flex space-x-4 items-center">
         <LuSearch className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300" />
-        <FiUser className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300" onClick={() => navigate("/registration")} />
+        <FiUser
+          className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300"
+          onClick={() => navigate("/registration")}
+        />
         <IoHeartOutline className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300" />
       </div>
 
@@ -80,7 +92,7 @@ function Navbar() {
           </li>
           <li>
             <a className="cursor-pointer" onClick={() => navigate("/rooms")}>
-              Rooms
+              Dininng
             </a>
           </li>
           <li>About Us</li>

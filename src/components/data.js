@@ -10,3 +10,10 @@ export const places = [
   { key: "elia", label: " Elia Beach" },
   { key: "paleokrastritsa", label: "Paleokrastritsa" },
 ];
+
+export const roomType = [
+  { key: "singleRoom", label: "Single Room" },
+  { key: "standardRoom", label: " Standard Room" },
+  { key: "presidentialRoom", label: "Presidential Room" },
+  { key: "deluxeRoom", label: "Deluxe Room" },
+];

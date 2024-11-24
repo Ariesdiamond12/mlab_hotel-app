@@ -96,6 +96,7 @@ function Login() {
             backgroundSize: "cover",
           }}
         ></div>
+
       </div>
       <div
         className="flex justify-start"

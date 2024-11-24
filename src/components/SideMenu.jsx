@@ -10,7 +10,7 @@ function SideMenu() {
         onClick={() => navigate("/dashboard")}
         className="w-full text-left px-4 py-2 rounded hover:bg-gray-700"
       >
-        Ocean Breeze
+        Luviana
       </button>
       <button
         onClick={() => navigate("/settings")}
