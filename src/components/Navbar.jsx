@@ -44,7 +44,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300">
+            <a className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300" onClick={() => navigate("/spa")}>
               Spa & Restaurant
             </a>
           </li>
