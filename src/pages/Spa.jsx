@@ -1,14 +1,16 @@
-import Navigation from "./Navbar";
 import React from "react";
 import Pool from "../assets/solace.jpeg";
-import Offers from '../assets/sushi.jpeg'
-import Dusk from '../assets/dusk.jpeg'
-import Collage from "./Collage";
+import Offers from "../assets/sushi.jpeg";
+import Outdoor from '../assets/pool.jpeg';
+import Navbar from "../components/Navbar";
+import Collage from "../components/Collage";
+import { FaSpa, FaRegSmile, FaClock, FaMountain, FaUserFriends } from "react-icons/fa";
+import Footer from "../components/Footer";
 
 function Spa() {
   return (
     <div className="w-full h-full relative">
-      <Navigation />
+      <Navbar />
       <div className="grid grid-cols-1 sm:grid-cols-2 h-auto w-full">
         <div>
           <img
@@ -76,37 +78,67 @@ function Spa() {
 
       {/* Seafood */}
       <div className="grid grid-cols-1 sm:grid-cols-2 h-auto w-full gap-8 mt-20">
-      {/* Left Column - Image of Scooter */}
-      <div className="flex justify-center items-center px-4">
-        <img
-          src={Dusk}
-          alt="Dinner"
-          className="rounded-xl object-cover shadow-xl"
-          style={{
-            width: "400px",
-            height: "500px",
-          }}
-        />
-      </div>
+        {/* Left Column - Image of Scooter */}
+        <div className="flex justify-center items-center px-4">
+          <img
+            src={Outdoor}
+            alt="Dinner"
+            className="rounded-xl object-cover shadow-xl"
+            style={{
+              width: "400px",
+              height: "500px",
+            }}
+          />
+        </div>
 
-      {/* Right Column - Text for Scooter in Santorini */}
-      <div className="flex flex-col items-start justify-center w-full sm:px-16 text-left">
-        <h1 className="text-3xl font-bold text-[#0368a6] mb-4">
-          Welcome To Luviana Hotel
+        {/* Right Column - Text for Scooter in Santorini */}
+        <div className="flex flex-col items-start justify-center w-full sm:px-16 text-left">
+          <h1 className="text-3xl font-bold text-[#0368a6] mb-4">
+            Welcome To Luviana Hotel
+          </h1>
+          <p className="text-base sm:text-lg text-gray-700 mb-6">
+            Luviana Hotel is the right choice for visitors who are searching for
+            a luxurious and comfortable place to stay in Santorini. Our hotel is
+            located in the heart of Santorini, Greece. You will get the best
+            view of the caldera and the sea from our hotel.
+          </p>
+          <button className="w-fit px-4 py-2 rounded-xl bg-[#10659d] text-white font-medium hover:bg-[#074a77] transition-all duration-300">
+            Read More
+          </button>
+        </div>
+      </div>
+      <Collage />
+
+      <div className="mt-20 px-8 sm:px-16 mb-32">
+        <h1 className="text-3xl font-bold text-center mb-10 text-[#0368a6]">
+          Our Services
         </h1>
-        <p className="text-base sm:text-lg text-gray-700 mb-6">
-          Luviana Hotel is the right choice for visitors who are searching for a
-          luxurious and comfortable place to stay in Santorini. Our hotel is
-          located in the heart of Santorini, Greece. You will get the best view
-          of the caldera and the sea from our hotel.
-        </p>
-        <button className="w-fit px-4 py-2 rounded-xl bg-[#10659d] text-white font-medium hover:bg-[#074a77] transition-all duration-300">
-          Read More
-        </button>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {[
+            { name: "Massage & Body Treatments", icon: <FaSpa /> },
+            { name: "Facials", icon: <FaRegSmile /> },
+            { name: "Full day Packages", icon: <FaClock /> },
+            { name: "Half day Packages", icon: <FaClock /> },
+            { name: "Himalayan Stone Back", icon: <FaMountain /> },
+            {name: "Couples Packages", icon: <FaUserFriends />}
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 flex flex-col items-center"
+            >
+              <div className="text-4xl text-[#0368a6] mb-4">{service.icon}</div>
+              <h2 className="text-xl font-semibold text-[#0368a6] mb-4 text-center">
+                {service.name}
+              </h2>
+              <p className="text-gray-700 text-center">
+                Experience ultimate relaxation with our specialized {service.name.toLowerCase()} services designed for your comfort.
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
 
-    <Collage/>
+      <Footer/>
     </div>
   );
 }

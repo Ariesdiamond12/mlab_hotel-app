@@ -1,18 +1,17 @@
 import React from "react";
 import santorini from "../assets/santorini.jpg";
-import Navbar from "./Navbar";
-import Explore from "./Explore";
-import Content from "./Content";
-import Map from "./Map";
-import Footer from "./Footer";
-import BookNow from "./BookNow";
-import Navigation from "./Navbar";
-import Amenities from "./Amenities";
+import Explore from "../components/Explore";
+import Content from "../components/Content";
+import Map from "../components/Map";
+import Footer from "../components/Footer";
+import BookNow from "../components/BookNow";
+import Amenities from "../components/Amenities";
+import Navbar from "../components/Navbar";
 
-function Hero() {
+function Home() {
   return (
     <div className="w-full h-screen relative rounded-xl">
-      <Navigation />
+      <Navbar/>
 
       {/* Background Image and Overlay Container */}
       <div className="relative h-[90vh] w-full">
@@ -44,7 +43,7 @@ function Hero() {
       </div>
 
       <Explore />
-      <Amenities/>
+      <Amenities />
       <Content />
       <Map />
       <Footer />
@@ -52,4 +51,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default Home;

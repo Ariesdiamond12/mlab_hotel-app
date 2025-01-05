@@ -1,13 +1,14 @@
 import React from "react";
 import Ocean from "../assets/oceanview.jpg";
-import Cards from "./Cards";
-import Footer from "./Footer";
-import Navigation from "./Navbar";
+import Navbar from "../components/Navbar";
+import Cards from "../components/Cards";
+import Footer from "../components/Footer";
+
 
 function Rooms() {
   return (
     <div className="w-full h-full relative">
-      <Navigation />
+      <Navbar/>
 
       {/* Background Image Section */}
       <div
@@ -26,8 +27,8 @@ function Rooms() {
         </div>
       </div>
 
-      <Cards />
-      <Footer />
+      <Cards/>
+      <Footer/>
     </div>
   );
 }

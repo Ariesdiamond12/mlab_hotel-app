@@ -30,7 +30,7 @@ function Navbar() {
           <li>
             <a
               className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300"
-              onClick={() => navigate("/hero")}
+              onClick={() => navigate("/home")}
             >
               Home
             </a>
@@ -49,7 +49,7 @@ function Navbar() {
             </a>
           </li>
           <li>
-            <a className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300">
+            <a className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300" onClick={() => navigate("/contact")}>
               Contact Us
             </a>
           </li>
@@ -86,7 +86,7 @@ function Navbar() {
         <ul>
           <h1>Ocean Breeze</h1>
           <li>
-            <a className="cursor-pointer" onClick={() => navigate("/hero")}>
+            <a className="cursor-pointer" onClick={() => navigate("/home")}>
               Home
             </a>
           </li>

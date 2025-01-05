@@ -1,26 +1,25 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Login from "./components/Login";
-import Hero from "./components/Hero";
-import Rooms from "./components/Rooms";
-import AdminPanel from "./components/AdminPanel";
-import Registration from "./components/Registration";
-import Spa from "./components/Spa";
-// import BookingsData from "./components/BookingsData";
+import Login from "./pages/Login";
+import Home from "./pages/Home";
+import Registration from "./pages/Registration";
+import Rooms from "./pages/Rooms";
+import Spa from "./pages/Spa";
+import Contact from "./pages/Contact";
+
 
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/data" element={<BookingsData />} /> */}
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Hero/>} />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/" element={<Home/>} />
           <Route path="/registration" element={<Registration/>} />
-          <Route path="/hero" element={<Hero />} />
-          <Route path="/rooms" element={<Rooms />} />
+          <Route path="/home" element={<Home/>} />
+          <Route path="/rooms" element={<Rooms/>} />
           <Route path="/spa" element={<Spa/>}/>
-          <Route path="/admin" element={<AdminPanel />} />
+          <Route path="/contact" element={<Contact/>}/>
         </Routes>
       </BrowserRouter>
     </div>

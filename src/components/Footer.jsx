@@ -2,6 +2,9 @@ import React from "react";
 import Sea from "../assets/sea.jpg";
 
 function Footer() {
+  const d = new Date();
+  let year = d.getFullYear();
+
   return (
     <div className="w-full">
       {/* Footer Container */}
@@ -25,7 +28,7 @@ function Footer() {
                 Instagram
               </a>
             </div>
-            <p className="text-sm">© 2024 Luviana. All rights reserved.</p>
+            <p className="text-sm">© {year} Luviana. All rights reserved.</p>
           </div>
         </div>
       </div>

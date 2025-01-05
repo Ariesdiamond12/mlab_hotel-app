@@ -19,7 +19,7 @@ function Login() {
     try {
       await signInWithEmailAndPassword(auth, userName, password);
       setTimeout(() => {
-        navigate("/hero");
+        navigate("/home");
       }, 1000);
       toast.success("Signed In Successfully!");
       //toast.loading('redirecting...')
@@ -96,7 +96,6 @@ function Login() {
             backgroundSize: "cover",
           }}
         ></div>
-
       </div>
       <div
         className="flex justify-start"
