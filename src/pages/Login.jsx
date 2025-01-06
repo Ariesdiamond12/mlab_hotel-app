@@ -14,6 +14,9 @@ function Login() {
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
+  const d = new Date();
+  let year = d.getFullYear();
+
   const signIn = async (event) => {
     event.preventDefault();
     try {
@@ -102,7 +105,7 @@ function Login() {
         style={{ transform: "translateY(-5dvh)" }}
       >
         <div className="flex justify-between font-light text-gray-500 w-[40dvw] ms-10">
-          <p>@Luviana</p>
+          <p>@ {year} Luviana</p>
           <p>Terms of use</p>
         </div>
       </div>

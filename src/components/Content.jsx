@@ -15,7 +15,13 @@ import {
 import BookedRoom from "./BookedRoom";
 
 function Content() {
-  const [liked, setLiked] = React.useState("");
+  const [liked, setLiked] = React.useState([false, false]);
+
+  const handleLikeClick = (index) => {
+    const newLiked = [...liked];
+    newLiked[index] = !newLiked[index];
+    setLiked(newLiked);
+  };
 
   return (
     <div className="flex flex-col mb-44">
@@ -48,11 +54,13 @@ function Content() {
             <BookedRoom />
           </CardFooter>
 
-          <FaHeart
-            className="z-150 absolute top-2 left-2 text-white"
-            size={23}
-            onClick={() => setLiked(!liked)}
-          />
+          <div onClick={() => handleLikeClick(0)} className="cursor-pointer">
+            <FaHeart
+              className="z-150 absolute top-2 left-2 text-white"
+              size={23}
+              color={liked[0] ? "red" : "white"}
+            />
+          </div>
         </Card>
         <Card
           isFooterBlurred
@@ -72,11 +80,13 @@ function Content() {
             </div>
             <BookedRoom />
           </CardFooter>
-          <FaHeart
-            className="z-150 absolute top-2 left-2 text-white"
-            size={23}
-            onClick={() => setLiked(!liked)}
-          />
+          <div onClick={() => handleLikeClick(1)} className="cursor-pointer">
+            <FaHeart
+              className="z-150 absolute top-2 left-2 text-white"
+              size={23}
+              color={liked[1] ? "red" : "white"}
+            />
+          </div>
         </Card>
 
         <Card
@@ -97,11 +107,13 @@ function Content() {
             </div>
             <BookedRoom />
           </CardFooter>
-          <FaHeart
-            className="z-150 absolute top-2 left-2 text-white"
-            size={23}
-            onClick={() => setLiked(!liked)}
-          />
+          <div onClick={() => handleLikeClick(2)} className="cursor-pointer">
+            <FaHeart
+              className="z-150 absolute top-2 left-2 text-white"
+              size={23}
+              color={liked[2] ? "red" : "white"}
+            />
+          </div>
         </Card>
 
         <Card
@@ -122,11 +134,13 @@ function Content() {
             </div>
             <BookedRoom />
           </CardFooter>
-          <FaHeart
-            className="z-150 absolute top-2 left-2 text-white"
-            size={23}
-            onClick={() => setLiked(!liked)}
-          />
+          <div onClick={() => handleLikeClick(3)} className="cursor-pointer">
+            <FaHeart
+              className="z-150 absolute top-2 left-2 text-white"
+              size={23}
+              color={liked[3] ? "red" : "white"}
+            />
+          </div>
         </Card>
       </div>
     </div>
