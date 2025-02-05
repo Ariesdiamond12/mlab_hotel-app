@@ -17,3 +17,4 @@ export const roomType = [
   { key: "presidentialRoom", label: "Presidential Room" },
   { key: "deluxeRoom", label: "Deluxe Room" },
 ];
+

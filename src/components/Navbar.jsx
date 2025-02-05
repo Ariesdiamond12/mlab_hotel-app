@@ -16,11 +16,11 @@ function Navbar() {
   };
 
   return (
-    <div className="flex w-full justify-between items-center h-20 px-4 absolute z-10 text-white">
+    <div className="flex w-full justify-between items-center h-20 px-4 absolute z-10 text-black">
       {/* Navbar */}
       <div className="pl-16">
         <h1 onClick={handleNav} className={logo ? "hidden" : "block"}>
-          Luviana
+          Caldera Suites
         </h1>
       </div>
 
@@ -29,40 +29,54 @@ function Navbar() {
         <ul className="hidden md:flex space-x-8 items-center">
           <li>
             <a
-              className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300"
+              className="cursor-pointer px-4 py-2 h-5 text-black relative group"
+              smooth={true}
               onClick={() => navigate("/home")}
             >
               Home
+              <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#0368a6] transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
           <li>
             <a
-              className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300"
+              className="cursor-pointer px-4 py-2 h-5 text-black relative group"
+              smooth={true}
               onClick={() => navigate("/rooms")}
             >
               Rooms
+              <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#0368a6] transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
           <li>
-            <a className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300" onClick={() => navigate("/spa")}>
+            <a
+              className="cursor-pointer px-4 py-2 h-5 text-black relative group"
+              smooth={true}
+              onClick={() => navigate("/spa")}
+            >
               Spa & Restaurant
+              <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#0368a6] transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
           <li>
-            <a className="cursor-pointer px-4 py-2 rounded-lg text-white hover:bg-gray-400 transition-all duration-300" onClick={() => navigate("/contact")}>
+            <a
+              className="cursor-pointer px-4 py-2 h-5 text-black relative group"
+              smooth={true}
+              onClick={() => navigate("/contact")}
+            >
               Contact Us
+              <span className="absolute bottom-0 left-0 w-0 h-[3px] bg-[#0368a6] transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
         </ul>
       </div>
 
       <div className="flex space-x-4 items-center">
-        <LuSearch className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300" />
+        <LuSearch className="w-7 h-6 cursor-pointer hover:text-[#0368a6] transition-all duration-300" />
         <FiUser
-          className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300"
+          className="w-7 h-6 cursor-pointer hover:text-[#0368a6] transition-all duration-300"
           onClick={() => navigate("/registration")}
         />
-        <IoHeartOutline className="w-7 h-6 cursor-pointer hover:text-gray-400 transition-all duration-300" />
+        <IoHeartOutline className="w-7 h-6 cursor-pointer hover:text-[#0368a6] transition-all duration-300" />
       </div>
 
       {/* Hamburger Menu */}
@@ -84,7 +98,7 @@ function Navbar() {
         }
       >
         <ul>
-          <h1>Ocean Breeze</h1>
+          <h1>Caldera Suites</h1>
           <li>
             <a className="cursor-pointer" onClick={() => navigate("/home")}>
               Home
@@ -92,7 +106,7 @@ function Navbar() {
           </li>
           <li>
             <a className="cursor-pointer" onClick={() => navigate("/rooms")}>
-              Dininng
+              Dining
             </a>
           </li>
           <li>About Us</li>

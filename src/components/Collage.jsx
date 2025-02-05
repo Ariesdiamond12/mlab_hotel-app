@@ -12,7 +12,7 @@ function Collage() {
     <div className="flex flex-col justify-center items-center m-32">
       <div className="text-center my-8">
         <p className="text-[#10659d] text-3xl font-bold">
-          What We Offer At Luviana
+          What We Offer At Caldera Suites
         </p>
       </div>
       <div className="max-w-[900px] gap-2 grid grid-cols-12 grid-rows-2 px-8">

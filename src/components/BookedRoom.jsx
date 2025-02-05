@@ -92,3 +92,10 @@ function BookedRoom() {
 }
 
 export default BookedRoom;
+
+// <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
+//           <h1 className="text-3xl md:text-4xl font-semibold">
+//             Find Your Perfect Stay
+//           </h1>
+//           <p className="mt-2 text-lg">Discover luxury and comfort at unbeatable prices.</p>
+//         </div>

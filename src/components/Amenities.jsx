@@ -11,8 +11,8 @@ import {
 
 function Amenities() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 h-auto w-full gap-8 mt-20">
-      <div className="flex flex-col justify-center w-full px-8 sm:px-16">
+    <div className="grid grid-cols-1 lg:grid-cols-2 h-auto w-full gap-8 mt-20">
+      <div className="flex flex-col justify-start w-full px-8 lg:px-16">
         <h1 className="font-semibold text-2xl">Our Amenities</h1>
         <p className="mt-4 text-lg text-gray-700">
           Our hotel offers a range of amenities to make your stay comfortable
@@ -20,41 +20,42 @@ function Amenities() {
           On the ground floor, apart from the reception there is a comfortable
           lounge where you can sit and drink coffee.
         </p>
-        <ul className="flex flex-wrap justify-start gap-8 mt-6">
-          <li className="flex items-center text-lg">
-            <FaSwimmer className="text-[#0368a6] mr-3" size={35} /> Infinity
-            Pool
-          </li>
-          <li className="flex items-center text-lg">
-            <FaSpa className="text-[#0368a6] mr-3" size={35} /> Spa & Wellness
-            Center
-          </li>
-          <li className="flex items-center text-lg">
-            <FaUtensils className="text-[#0368a6] mr-3" size={35} /> Fine Dining
-          </li>
-          <li className="flex items-center text-lg">
-            <FaCocktail className="text-[#0368a6] mr-3" size={35} /> Rooftop Bar
-          </li>
-          <li className="flex items-center text-lg">
-            <FaWifi className="text-[#0368a6] mr-3" size={35} /> High-Speed WiFi
-          </li>
-          <li className="flex items-center text-lg">
-            <FaUmbrellaBeach className="text-[#0368a6] mr-3" size={35} />
+        
+        {/* Grid for amenities icons */}
+        <div className="grid grid-cols-2 gap-y-8 gap-x-4 mt-8">
+          <div className="flex items-center text-lg">
+            <FaSwimmer className="text-[#0368a6] mr-3" size={24} />
+            Infinity Pool
+          </div>
+          <div className="flex items-center text-lg">
+            <FaSpa className="text-[#0368a6] mr-3" size={24} />
+            Spa & Wellness Center
+          </div>
+          <div className="flex items-center text-lg">
+            <FaUtensils className="text-[#0368a6] mr-3" size={24} />
+            Fine Dining
+          </div>
+          <div className="flex items-center text-lg">
+            <FaCocktail className="text-[#0368a6] mr-3" size={24} />
+            Rooftop Bar
+          </div>
+          <div className="flex items-center text-lg">
+            <FaWifi className="text-[#0368a6] mr-3" size={24} />
+            High-Speed WiFi
+          </div>
+          <div className="flex items-center text-lg">
+            <FaUmbrellaBeach className="text-[#0368a6] mr-3" size={24} />
             Private Beach
-          </li>
-        </ul>
+          </div>
+        </div>
       </div>
 
-      {/* Right Column - Image of Santorini Sunset */}
-      <div className="flex justify-center items-center px-4">
+      {/* Right Column - Image */}
+      <div className="flex justify-center items-start px-4">
         <img
           src={offers}
           alt="Amenities"
-          className="rounded-xl object-cover shadow-xl"
-          style={{
-            width: "600px",
-            height: "500px",
-          }}
+          className="rounded-xl object-cover shadow-xl w-full max-w-[600px] h-[400px]"
         />
       </div>
     </div>

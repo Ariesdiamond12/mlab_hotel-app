@@ -25,10 +25,10 @@ function Explore() {
           Raising Comfort To the Highest Level
         </p>
         <h1 className="text-3xl font-bold text-[#0368a6] mb-4">
-          Welcome To Luviana Hotel
+          Welcome To Caldera Suites
         </h1>
         <p className="text-base sm:text-lg text-gray-700 mb-6">
-          Luviana Hotel is the right choice for visitors who are searching for a
+          Caldera Suites is the right choice for visitors who are searching for a
           luxurious and comfortable place to stay in Santorini. Our hotel is
           located in the heart of Santorini, Greece. You will get the best view
           of the caldera and the sea from our hotel.
