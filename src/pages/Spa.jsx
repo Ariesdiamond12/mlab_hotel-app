@@ -1,41 +1,49 @@
 import React from "react";
 import Pool from "../assets/solace.jpeg";
 import Offers from "../assets/sushi.jpeg";
-import Outdoor from '../assets/pool.jpeg';
+import Outdoor from "../assets/pool.jpeg";
 import Navbar from "../components/Navbar";
 import Collage from "../components/Collage";
-import { FaSpa, FaRegSmile, FaClock, FaMountain, FaUserFriends } from "react-icons/fa";
+import {
+  FaSpa,
+  FaRegSmile,
+  FaClock,
+  FaMountain,
+  FaUserFriends,
+} from "react-icons/fa";
 import Footer from "../components/Footer";
 
 function Spa() {
   return (
     <div className="w-full h-full relative">
       <Navbar />
-      <div className="grid grid-cols-1 sm:grid-cols-2 h-auto w-full">
-        <div>
-          <img
-            src={Pool}
-            alt="Villa"
-            className="object-cover shadow-xl bg-gray-900/30"
-            style={{
-              width: "100%",
-              height: "500px",
-            }}
-          />
-        </div>
+      <div className="bg-white overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 h-auto w-full mt-20">
+          <div>
+            <img
+              src={Pool}
+              alt="Villa"
+              className="object-cover shadow-xl bg-gray-900/30"
+              style={{
+                width: "100%",
+                height: "500px",
+              }}
+            />
+          </div>
 
-        {/* Right Column - Text for Scooter in Santorini */}
-        <div className="flex flex-col items-start justify-center w-full sm:px-16 text-left bg-[#0368a6]">
-          <p className="font-medium text-lg text-white mb-2">
-            Inspired By the vast Beauty of the Mediterranean Sea
-          </p>
-          <h1 className="text-3xl font-bold text-white mb-4">
-            Welcome To Caldera Suites
-          </h1>
-          <p className="text-base sm:text-lg text-white mb-6">
-            Enjoy a Luxury Stay at Caldera Suites, where you can indulge in the
-            finest amenities and services.
-          </p>
+          {/* Right Column - Text for Scooter in Santorini */}
+          <div className="flex flex-col items-start justify-center w-full sm:px-16 text-left bg-[#0368a6]">
+            <p className="font-medium text-lg text-white mb-2">
+              Inspired By the vast Beauty of the Mediterranean Sea
+            </p>
+            <h1 className="text-3xl font-bold text-white mb-4">
+              Welcome To Caldera Suites
+            </h1>
+            <p className="text-base sm:text-lg text-white mb-6">
+              Enjoy a Luxury Stay at Caldera Suites, where you can indulge in
+              the finest amenities and services.
+            </p>
+          </div>
         </div>
       </div>
 
@@ -97,10 +105,10 @@ function Spa() {
             Welcome To Caldera Suites
           </h1>
           <p className="text-base sm:text-lg text-gray-700 mb-6">
-            Caldera Suites is the right choice for visitors who are searching for
-            a luxurious and comfortable place to stay in Santorini. Our hotel is
-            located in the heart of Santorini, Greece. You will get the best
-            view of the caldera and the sea from our hotel.
+            Caldera Suites is the right choice for visitors who are searching
+            for a luxurious and comfortable place to stay in Santorini. Our
+            hotel is located in the heart of Santorini, Greece. You will get the
+            best view of the caldera and the sea from our hotel.
           </p>
           <button className="w-fit px-4 py-2 rounded-xl bg-[#10659d] text-white font-medium hover:bg-[#074a77] transition-all duration-300">
             Read More
@@ -120,7 +128,7 @@ function Spa() {
             { name: "Full day Packages", icon: <FaClock /> },
             { name: "Half day Packages", icon: <FaClock /> },
             { name: "Himalayan Stone Back", icon: <FaMountain /> },
-            {name: "Couples Packages", icon: <FaUserFriends />}
+            { name: "Couples Packages", icon: <FaUserFriends /> },
           ].map((service, index) => (
             <div
               key={index}
@@ -131,14 +139,15 @@ function Spa() {
                 {service.name}
               </h2>
               <p className="text-gray-700 text-center">
-                Experience ultimate relaxation with our specialized {service.name.toLowerCase()} services designed for your comfort.
+                Experience ultimate relaxation with our specialized{" "}
+                {service.name.toLowerCase()} services designed for your comfort.
               </p>
             </div>
           ))}
         </div>
       </div>
 
-      <Footer/>
+      <Footer />
     </div>
   );
 }

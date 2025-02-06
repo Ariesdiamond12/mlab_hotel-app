@@ -27,7 +27,7 @@ function Content() {
     <div className="flex flex-col mb-44">
       {/* Title Section */}
       <div className="text-center mt-20">
-        <h1 className="font-semibold text-2xl">Explore Our Exclusive Rooms</h1>
+        <h1 className="font-semibold text-2xl">Explore Our <span className="text-[#0368a6]">Exclusive</span> Rooms</h1>
         <p className="mt-2 text-gray-600">
           Discover a whole new way of living your holidays in Greece, Santorini.
         </p>
@@ -128,7 +128,7 @@ function Content() {
           />
           <CardFooter className="absolute bg-white/30 bottom-0 z-10 justify-between">
             <div>
-              <p className="text-black text-tiny">Deluxe Suite</p>
+              <p className="text-black text-tiny">Grand Deluxe Room</p>
               <p className="text-black text-tiny">Available</p>
               <p className="text-black text-tiny">R3000 per night</p>
             </div>

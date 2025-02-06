@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Room2 from "../assets/paleokrastritsa-1.jpg";
 import {
   DatePicker,
@@ -14,9 +14,54 @@ import {
 
 import { guests, roomType } from "./data";
 import PayPalButton from "./PaypalButton";
+import images from "../constants/images";
 
 function BookedRoom() {
   const { isOpen, onOpen, onOpenChange } = useDisclosure();
+  const [selectedDate, setSelectedDate] = useState();
+
+  const rooms = [
+    {
+      id: 1,
+      name: "Classic Room",
+      image: images.Suite1,
+      standardRate: 39,
+      breakfastRate: 49,
+      rating: 4.5,
+      reviews: 128,
+      available: true,
+    },
+    {
+      id: 2,
+      name: "Standard Room",
+      image: images.Paleokrastritsa1,
+      standardRate: 42,
+      breakfastRate: 54,
+      rating: 4.8,
+      reviews: 156,
+      available: true,
+    },
+    {
+      id: 3,
+      name: "Family Room",
+      image: images.Suite3,
+      standardRate: 52,
+      breakfastRate: 69,
+      rating: 4.7,
+      reviews: 98,
+      available: false,
+    },
+    {
+      id: 4,
+      name: "Grand Deluxe Room",
+      image: images.Suite4,
+      standardRate: 60,
+      breakfastRate: 80,
+      rating: 4.9,
+      reviews: 203,
+      available: false,
+    },
+  ];
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-1">
@@ -37,12 +82,15 @@ function BookedRoom() {
                   <div className="flex flex-col md:flex-row gap-6">
                     {/* Image Column */}
                     <div className="md:w-1/2 flex justify-center items-center">
-                      <img
-                        src={Room2}
-                        alt="Greece"
-                        className="w-full h-auto object-cover rounded-lg"
-                      />
-
+                      {rooms.map((room) => (
+                        <div key={room.id} className="bg-white rounded-lg shadow-sm p-4 flex flex-wrap gap-4">
+                          <img
+                            src={room.image}
+                            alt="Greece"
+                            className="w-full h-auto object-cover rounded-lg"
+                          />
+                        </div>
+                      ))}
                     </div>
                     {/* Form Column */}
                     <div className="md:w-1/2 flex flex-col gap-4">
@@ -77,7 +125,7 @@ function BookedRoom() {
                         </Select>
                       </div>
                       <div>
-                        <PayPalButton/>
+                        <PayPalButton />
                       </div>
                     </div>
                   </div>
@@ -92,10 +140,3 @@ function BookedRoom() {
 }
 
 export default BookedRoom;
-
-// <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-6">
-//           <h1 className="text-3xl md:text-4xl font-semibold">
-//             Find Your Perfect Stay
-//           </h1>
-//           <p className="mt-2 text-lg">Discover luxury and comfort at unbeatable prices.</p>
-//         </div>
